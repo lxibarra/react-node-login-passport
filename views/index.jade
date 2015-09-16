@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    .row
+        .col-xs-12
+            h1 Authentication APP
+    .row
+        .col-md-4.col-xs-12
+            #loginCtrl
+            hr
+            h2.text-center or
+            #socialLinks
+        .col-md-8.col-xs-12
+            |Avaliable Resources:
+            p current cookies:
+            pre=cookies
+            hr
+            p Decrypted cookie (session id stored in mongo)
+            p=decrypted
+            pre=userInfo
+block scripts
+    script(src="public/scripts/loginForm.js", type="text/jsx")
+    script(src="public/scripts/socialNetworks.js", type="text/jsx")
